@@ -21,7 +21,7 @@ class TapDetails extends StatefulWidget {
 }
 
 class ScheduleExample extends State<TapDetails> {
-  String _subjectText, _startTimeText, _endTimeText, _dateText, _timeDetails;
+  String? _subjectText, _startTimeText, _endTimeText, _dateText, _timeDetails;
 
   @override
   void initState() {
@@ -53,7 +53,7 @@ class ScheduleExample extends State<TapDetails> {
   void calendarTapped(CalendarTapDetails details) {
     if (details.targetElement == CalendarElement.appointment ||
         details.targetElement == CalendarElement.agenda) {
-      final Appointment appointmentDetails = details.appointments[0];
+      final Appointment appointmentDetails = details.appointments![0];
       _subjectText = appointmentDetails.subject;
       _dateText = DateFormat('MMMM dd, yyyy')
           .format(appointmentDetails.startTime)
@@ -65,7 +65,7 @@ class ScheduleExample extends State<TapDetails> {
       _timeDetails = '$_startTimeText - $_endTimeText';
     } else if (details.targetElement == CalendarElement.calendarCell) {
       _subjectText = "You have tapped cell";
-      _dateText = DateFormat('MMMM dd, yyyy').format(details.date).toString();
+      _dateText = DateFormat('MMMM dd, yyyy').format(details.date!).toString();
       _timeDetails = '';
     }
     showDialog(
@@ -92,7 +92,7 @@ class ScheduleExample extends State<TapDetails> {
                     height: 40,
                     child: Row(
                       children: <Widget>[
-                        Text(_timeDetails,
+                        Text(_timeDetails!,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400, fontSize: 15)),
                       ],

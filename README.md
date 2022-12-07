@@ -4,6 +4,7 @@ A quick-start example to help you to interact with the event calendar cell when 
 
 Using [cellEndPadding](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellEndPadding.html), you can add padding to the right end of a cell in the Flutter Event Calendar to interact when the calendar cells have appointments. Then Assign the value to the calendar's cellEndPadding property, and then use the calendar's onTap callback to display the tapped details, whether it's a calendar cell or an appointment.
 
+![Selection](https://user-images.githubusercontent.com/46158936/206174667-ac276bbd-41fd-4cbc-afb8-ae7e7fad3e71.gif)
 
 ## Requirements to run the demo
 * [VS Code](https://code.visualstudio.com/download)

@@ -1,6 +1,6 @@
-# How to interact with event calendar cell when appointments loaded in the Flutter Calendar?
+# How to interact with the event calendar cell when appointments are loaded in the Flutter Calendar?
 
-A quick-start example to help you to interact with event calendar cell when appointments loaded in the Flutter Calendar.
+A quick-start example to help you to interact with the event calendar cell when appointments are loaded in the Flutter Calendar.
 
 Using [cellEndPadding](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellEndPadding.html), you can add padding to the right end of a cell in the Flutter Event Calendar to interact when the calendar cells have appointments. Then Assign the value to the calendar's cellEndPadding property, and then use the calendar's onTap callback to display the tapped details, whether it's a calendar cell or an appointment.
 

@@ -1,4 +1,4 @@
-package com.example.flutter_appointmentpadding
+package com.example.appointmentpadding
 
 import io.flutter.embedding.android.FlutterActivity
 

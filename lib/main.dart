@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(AppointmentPadding());
+void main() => runApp(const AppointmentPadding());
 
 class AppointmentPadding extends StatelessWidget {
+  const AppointmentPadding({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: TapDetails(),
     );
@@ -16,6 +17,8 @@ class AppointmentPadding extends StatelessWidget {
 }
 
 class TapDetails extends StatefulWidget {
+  const TapDetails({super.key});
+
   @override
   State<StatefulWidget> createState() => ScheduleExample();
 }
@@ -72,7 +75,7 @@ class ScheduleExample extends State<TapDetails> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Container(child: new Text('$_subjectText')),
+            title: Container(child: Text('$_subjectText')),
             content: Container(
               height: 80,
               child: Column(
@@ -81,7 +84,7 @@ class ScheduleExample extends State<TapDetails> {
                     children: <Widget>[
                       Text(
                         '$_dateText',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 20,
                         ),
@@ -93,7 +96,7 @@ class ScheduleExample extends State<TapDetails> {
                     child: Row(
                       children: <Widget>[
                         Text(_timeDetails!,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontWeight: FontWeight.w400, fontSize: 15)),
                       ],
                     ),
@@ -102,11 +105,11 @@ class ScheduleExample extends State<TapDetails> {
               ),
             ),
             actions: <Widget>[
-              new FlatButton(
+              TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: new Text('Close'))
+                  child: const Text('Close'))
             ],
           );
         });
